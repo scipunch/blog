@@ -2,7 +2,7 @@
 #+author: SciPunch
 #+OPTIONS: toc:nil
 #+OPTIONS: num:nil
-#+HTML_HEAD: <link rel="stylesheet" href="/public/style.css" type="text/css" />
+#+HTML_HEAD: <link rel="stylesheet" href="/blog/public/style.css" type="text/css" />
 
 #+ATTR_HTML: :align center
 #+ATTR_ORG: :align center
