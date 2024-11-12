@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-11-12 Tue 17:14 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fused Jazzberries</title>
+<meta name="author" content="SciPunch" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" href="/style.css" type="text/css" />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Fused Jazzberries</h1>
+
+<div id="org7923e93" class="figure">
+<p><img src="https://imgur.com/jhqjYBj.png" alt="jhqjYBj.png" align="center" />
+</p>
+</div>
+
+<div class="intro" id="orgbddd499">
+<p>
+Welcome to "Fused Jazzberries," a musical journey that explores the eclectic blend of tracks from my playlist. Dive into a diverse collection of genres, from the thrilling rhythms of racing games to the soulful melodies of contemporary artists. Join me as we uncover the cultural impact and unique sounds that make each piece a memorable part of this sonic adventure.
+</p>
+
+</div>
+<div id="outline-container-org588234d" class="outline-2">
+<h2 id="org588234d">The Motorious Zone by Isamu Ohira</h2>
+<div class="outline-text-2" id="text-org588234d">
+<p>
+Part of the iconic soundtrack for the racing video game <b>Gran Turismo 4</b>. It features an energetic blend of electronic and rock elements that perfectly capture the thrill of racing. The unique aspect of this piece is its ability to evoke a sense of speed and excitement, enhancing the gaming experience. The composition's dynamic rhythm and engaging melodies make it memorable, appealing not only to gamers but also to fans of instrumental music. Before adding this track to the playlist, I was hugely inspired by <a href="https://www.youtube.com/watch?v=3ceLZmV-jsA">this</a> playlist and soon will make a full drive-inspired playlist.
+</p>
+
+<p>
+<code>00:00:00 - 00:01:52</code>
+</p>
+</div>
+</div>
+<div id="outline-container-org359b8fa" class="outline-2">
+<h2 id="org359b8fa">Supernatural (Instrumental) by NewJeans</h2>
+<div class="outline-text-2" id="text-org359b8fa">
+<p>
+Showcases NewJeans' modern take on <a href="https://en.wikipedia.org/wiki/New_jack_swing">New Jack Swing</a> (a dead genre, BTW), blending nostalgic sounds with contemporary production techniques. The track stands out due to its catchy basslines and melodic hooks, creating an atmospheric vibe that resonates with listeners. If you like the instrumental, then <a href="https://youtu.be/ZncbtRo7RXs?si=CT6EPhzY8sHmZA5C">here</a> is the full song. Thanks to this guy for the great exploration of the K-pop genius <a href="https://www.youtube.com/watch?v=L6klfBKYMi0">video</a>.
+</p>
+
+<p>
+<code>00:01:52 - 00:05:03</code>
+</p>
+</div>
+</div>
+<div id="outline-container-orgf339c67" class="outline-2">
+<h2 id="orgf339c67">ABC My Love by ZACKEY FORCE FUNK</h2>
+<div class="outline-text-2" id="text-orgf339c67">
+<p>
+Gangster funk from the streets of Arizona. The song features catchy hooks and playful lyrics that invite listeners to engage with the music actively. The author gave up his life of crime and started hard work. His first debut album was in 2009, and after 10 years, he made this one. So, thanks for that music to the psychedelic future funk pirate that he is today.
+</p>
+
+<p>
+<code>00:05:03 - 00:08:45</code>
+</p>
+</div>
+</div>
+<div id="outline-container-org8906a77" class="outline-2">
+<h2 id="org8906a77">Snowbirds by The Fearless Flyers</h2>
+<div class="outline-text-2" id="text-org8906a77">
+<p>
+This group was formed by several Vulfpeck <a href="https://www.youtube.com/watch?v=jRHQPG1xd9o">this</a> and <a href="https://www.youtube.com/watch?v=yG96RttfZtM">that</a> members. This instrumental funk track showcases The Fearless Flyers' exceptional musicianship. Its groovy bass lines and tight rhythms create a compelling soundscape that encourages movement. The blend of funk and rock influences is highlighted by intricate guitar riffs and brass sections that pay homage to classic funk while feeling fresh and contemporary.
+</p>
+
+<p>
+<code>00:08:45 - 00:12:35</code>
+</p>
+</div>
+</div>
+<div id="outline-container-org3acb545" class="outline-2">
+<h2 id="org3acb545">Four Miles by Pablo Queu</h2>
+<div class="outline-text-2" id="text-org3acb545">
+<p>
+An atmospheric track that combines elements of ambient music with subtle electronic beats. Pablo creates a soundscape that feels expansive and introspective, inviting listeners on a journey through sound. Its uniqueness lies in its ability to evoke emotions through minimalistic arrangements, making it a perfect background for relaxation or contemplation.
+</p>
+
+<p>
+<code>00:12:35 - 00:16:06</code>
+</p>
+</div>
+</div>
+<div id="outline-container-orga4917b6" class="outline-2">
+<h2 id="orga4917b6">Everybody Loves The Sunshine by Takuya Kuroda</h2>
+<div class="outline-text-2" id="text-orga4917b6">
+<p>
+Takuya Kuroda's rendition of "Everybody Loves The Sunshine" pays homage to <a href="https://youtu.be/nC9dQOnUyao?si=Z8h6jTkyo8AlgkAw">Roy Ayers'</a> classic while infusing it with fresh jazz elements. Featuring smooth vocals from <a href="https://youtu.be/4iYLzrrfRK4?si=zWkdMVVFHNKIMu-0">José James</a>, this track blends soul and jazz seamlessly. Its greatness comes from its nostalgic yet modern feel, showcasing f
+Kuroda's trumpet skills alongside rich harmonies that evoke warmth and positivity.
+</p>
+
+<p>
+<code>00:16:06 - 00:25:32</code>
+</p>
+</div>
+</div>
+<div id="outline-container-org902f36d" class="outline-2">
+<h2 id="org902f36d">Sleepy by Dominique Fils-Aimé</h2>
+<div class="outline-text-2" id="text-org902f36d">
+<p>
+From Dominique Fils-Aimé's debut album, this track highlights the soulful artist's voice and minimalist production style. "Sleepy" emphasizes lyrical depth and emotional resonance, making it a reflective piece that explores themes of rest and introspection. Its uniqueness lies in Fils-Aimé's ability to convey vulnerability through her powerful yet delicate vocal delivery, creating an intimate listening experience. There is actually a far more popular <a href="https://www.youtube.com/watch?v=JLWRXfcX4EQ">track in that album with its own video clip</a>.
+</p>
+
+<p>
+<code>00:25:32 - 00:28:54</code>
+</p>
+</div>
+</div>
+<div id="outline-container-orge22f2a9" class="outline-2">
+<h2 id="orge22f2a9">Matty by Hanorah</h2>
+<div class="outline-text-2" id="text-orge22f2a9">
+<p>
+Hanorah's "Matty" features her silk-like vocals paired with a lively tempo that blends pop and soul influences with light and bright guitar chords. The song's strength lies in its lyrical storytelling combined with infectious melodies that resonate with listeners. What sets it apart is Hanorah's vocal texture, which reminds me of <a href="https://www.youtube.com/watch?v=KUmZp8pR1uc">Amy Winehouse</a> but maintains her own distinct sound.
+</p>
+
+<p>
+<code>00:28:54 - 00:34:42</code>
+</p>
+</div>
+</div>
+<div id="outline-container-org7d1a646" class="outline-2">
+<h2 id="org7d1a646">Simple Imagination by Young Gun Silver Fox</h2>
+<div class="outline-text-2" id="text-org7d1a646">
+<p>
+Characterized by its smooth harmonies and laid-back grooves, this track embodies a feel-good vibe reminiscent of classic soft rock. The song excels in its melodic structure and catchy chorus, making it an easy listen for fans of retro-inspired music. Its uniqueness comes from its blend of nostalgia with modern production techniques.
+</p>
+
+<p>
+<code>00:34:42 - 00:38:41</code>
+</p>
+</div>
+</div>
+<div id="outline-container-org227ee20" class="outline-2">
+<h2 id="org227ee20">Pinoy Funk by Regalado</h2>
+<div class="outline-text-2" id="text-org227ee20">
+<p>
+Introduces listeners to the vibrant world of South Asian funk music. With infectious rhythms and lively instrumentation, "Pinoy Funk" celebrates cultural richness through music. Its greatness lies in its ability to transport listeners to a festive atmosphere filled with energy and joy, showcasing the diversity within global funk scenes. The album itself is named "Ayo ke Disco," which translates from Indonesian as "Let's go to the disco." BTW, it reminded me of <a href="https://www.youtube.com/watch?v=Zy1-TZUrP08">Kakashi by Yasuaki Shimizu</a>.
+</p>
+
+<p>
+<code>00:38:41 - 00:42:08</code>
+</p>
+</div>
+</div>
+<div id="outline-container-orgac729ab" class="outline-2">
+<h2 id="orgac729ab">Pacific 707 by Cruisic</h2>
+<div class="outline-text-2" id="text-orgac729ab">
+<p>
+An extended instrumental piece that combines elements of jazz-funk with electronic influences. Its smooth transitions and layered sounds create a relaxing yet engaging listening experience. This track blends genres seamlessly while maintaining a cohesive sound throughout its length.
+</p>
+
+<p>
+<code>00:42:08 - 00:47:16</code>
+</p>
+</div>
+</div>
+<div id="outline-container-org3fac1fa" class="outline-2">
+<h2 id="org3fac1fa">Amandi Tereo by M. Dionigi &amp; D. Baldelli</h2>
+<div class="outline-text-2" id="text-org3fac1fa">
+<p>
+Features deep house elements combined with melodic progressions that create an immersive atmosphere. "Amandi Tereo" stands out due to its intricate layering and rhythmic complexity, appealing to both club-goers and home listeners alike. Its uniqueness is highlighted by its ability to evoke emotions through danceable beats.
+</p>
+
+<p>
+<code>00:47:16 - 00:51:47</code>
+</p>
+</div>
+</div>
+<div id="outline-container-orgb63e98b" class="outline-2">
+<h2 id="orgb63e98b">Lick Tonight &amp; Anato by LUVRAW</h2>
+<div class="outline-text-2" id="text-orgb63e98b">
+<p>
+&lt;Anime references start here&gt; These two tracks are from the <a href="https://www.imdb.com/title/tt3158246/?ref_=fn_al_tt_1">Space Dandy</a> soundtrack (anime produced by the GOAT <a href="https://www.imdb.com/title/tt0213338/">Cowboy Bebop</a>'s director). Here I can't help but mention <a href="https://www.youtube.com/watch?v=2VsgkIE-RHg">this</a> and <a href="https://www.youtube.com/watch?v=vu_YGgZQ9DE">that</a> virtual sessions of two great Yoko Kanno compositions.
+</p>
+
+<p>
+<code>00:51:47 - 00:58:28</code>
+</p>
+</div>
+</div>
+<div id="outline-container-orgd216e99" class="outline-2">
+<h2 id="orgd216e99">Fly Me To The Moon by Dark Soul</h2>
+<div class="outline-text-2" id="text-orgd216e99">
+<p>
+Transforms the classic song into a hauntingly beautiful rendition associated with <b>Neon Genesis Evangelion</b> anime (another legendary title, BTW). It retains the original's emotional depth while adding layers of atmospheric soundscapes that enhance its impact. &lt;Anime references end here&gt;
+</p>
+
+<p>
+<code>00:58:28 - 01:02:59</code>
+</p>
+</div>
+</div>
+<div id="outline-container-orga15a6cd" class="outline-2">
+<h2 id="orga15a6cd">11th Hour by Lynda Dawn</h2>
+<div class="outline-text-2" id="text-orga15a6cd">
+<p>
+Lynda Dawn's rich vocals paired with soulful instrumentation evoke deep emotions. This track shines due to its lyrical content focused on urgency and reflection, making it relatable for many listeners. I love Dawn's powerful delivery combined with thoughtful songwriting.
+</p>
+
+<p>
+<code>01:02:59 - 01:07:11</code>
+</p>
+</div>
+</div>
+<div id="outline-container-org6b889e1" class="outline-2">
+<h2 id="org6b889e1">Healing Vibe by Delta Rain Dance</h2>
+<div class="outline-text-2" id="text-org6b889e1">
+<p>
+Focuses on creating a tranquil atmosphere through soothing melodies and gentle rhythms. It excels in promoting relaxation and mindfulness, making it perfect for meditation or unwinding after a long day. Its uniqueness lies in its holistic approach to music as a healing tool. It lets you relax after all the previous music and makes you ready for the final one.
+</p>
+
+<p>
+<code>01:07:11 - 01:10:07</code>
+</p>
+</div>
+</div>
+<div id="outline-container-org3e22cfe" class="outline-2">
+<h2 id="org3e22cfe">Aria Math by C418</h2>
+<div class="outline-text-2" id="text-org3e22cfe">
+<p>
+Captures the essence of exploration within the <b>Minecraft</b> universe through ambient soundscapes that evoke feelings of wonder and curiosity. Its greatness lies in how effectively it enhances gameplay experiences while standing alone as an engaging musical composition. What makes it unique is its association with gaming culture, resonating deeply with fans while showcasing C418's talent for creating immersive audio environments.
+</p>
+
+<blockquote>
+<p>
+Aria Math is a song full of Pan Drums and old synthesizers rhythmically dancing to ping pong delays. It’s also one of the Creative Mode songs. I wrote it with the beauty of the more extreme creations in Minecraft. Gigantic statues, entire cities, paintings, people, all recreated in this game. It’s awe-inspiring, and that’s what I wanted to kind of symbolize. Not sure if I succeeded? &#x2013; C418
+</p>
+</blockquote>
+
+<p>
+<code>01:10:07 - 01:15:17</code>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: SciPunch</p>
+<p class="date">Created: 2024-11-12 Tue 17:14</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
